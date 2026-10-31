@@ -36,7 +36,7 @@ export const ORGANIZATIONS_DATA: OrganizationItem[] = [
   {
     id: "org-3",
     // TODO: ganti nama organisasi
-    organization: "Panitia BUMN Cluster logistics Basketball Cup 2024",
+    organization: "Panitia BUMN Cluster logistics Basketball Cup",
     // TODO: ganti divisi dan jabatan
     role: "Publikasi dan Dokumentasi",
     // TODO: ganti periode keaktifan
@@ -49,7 +49,7 @@ export const ORGANIZATIONS_DATA: OrganizationItem[] = [
   {
     id: "org-4",
     // TODO: ganti nama organisasi
-    organization: "Panitia Liga Kampus ULBI GEN-II Tahun 2023",
+    organization: "Panitia Liga Kampus ULBI GEN - II",
     // TODO: ganti divisi dan jabatan
     role: "Publikasi dan Dokumentasi",
     // TODO: ganti periode keaktifan

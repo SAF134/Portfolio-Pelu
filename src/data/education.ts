@@ -14,9 +14,9 @@ export const EDUCATION_DATA: EducationItem[] = [
     // TODO: ganti lokasi kampus
     location: "Bandung, Jawa Barat",
     // TODO: ganti program studi aktual
-    major: "S1 Manajemen Transportasi",
+    major: "Manajemen Transportasi",
     // TODO: ganti jenjang pendidikan
-    degree: "Sarjana Transportasi S.Trans.",
+    degree: "S1",
     // TODO: ganti periode studi
     period: "2022 — 2026",
   },

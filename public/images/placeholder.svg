@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <rect width="400" height="300" fill="#E4E4E7"/>
+  <rect x="2" y="2" width="396" height="296" stroke="#18181B" stroke-width="2" stroke-dasharray="6 6"/>
+  <path d="M160 170L190 130L220 170H160Z" fill="#A1A1AA"/>
+  <circle cx="230" cy="120" r="15" fill="#A1A1AA"/>
+  <text x="200" y="210" text-anchor="middle" fill="#52525B" font-family="system-ui, sans-serif" font-size="14" font-weight="500">Pratinjau Sertifikat</text>
+</svg>

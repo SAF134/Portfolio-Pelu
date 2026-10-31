@@ -12,11 +12,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-zahran.vercel.app"),
-  title: "Iftikar Muhammad Zahran | Portofolio Profesional",
-  description: "Portofolio profesional Iftikar Muhammad Zahran.",
-  authors: [{ name: "Iftikar Muhammad Zahran" }],
+  title: "Iftikar Muhamad Zahran | Portofolio Profesional",
+  description: "Portofolio profesional Iftikar Muhamad Zahran.",
+  authors: [{ name: "Iftikar Muhamad Zahran" }],
   keywords: [
-    "Iftikar Muhammad Zahran",
+    "Iftikar Muhamad Zahran",
     "Portofolio",
     "Logistik",
     "Supply Chain",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Iftikar Muhammad Zahran | Portofolio Profesional",
-    description: "Portofolio profesional Iftikar Muhammad Zahran.",
+    title: "Iftikar Muhamad Zahran | Portofolio Profesional",
+    description: "Portofolio profesional Iftikar Muhamad Zahran.",
     type: "website",
     locale: "id_ID",
     url: "https://portfolio-zahran.vercel.app",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
         url: "/images/zahran.webp",
         width: 800,
         height: 1000,
-        alt: "Iftikar Muhammad Zahran",
+        alt: "Iftikar Muhamad Zahran",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iftikar Muhammad Zahran | Portofolio Profesional",
-    description: "Portofolio profesional Iftikar Muhammad Zahran.",
+    title: "Iftikar Muhamad Zahran | Portofolio Profesional",
+    description: "Portofolio profesional Iftikar Muhamad Zahran.",
     images: ["/images/zahran.webp"],
   },
   robots: {

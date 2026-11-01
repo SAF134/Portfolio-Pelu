@@ -58,5 +58,5 @@ export const EDUCATION_DATA: EducationItem[] = [
     degree: "Sekolah Dasar",
     // TODO: ganti periode studi
     period: "2010 — 2016",
-  }
+  },
 ];

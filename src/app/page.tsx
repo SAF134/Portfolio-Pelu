@@ -4,6 +4,7 @@ import { EducationSection } from "@/components/sections/education";
 import { SkillsSection } from "@/components/sections/skills";
 import { ExperienceSection } from "@/components/sections/experience";
 import { OrganizationsSection } from "@/components/sections/organizations";
+import { ProjectsSection } from "@/components/sections/projects";
 import { CertificatesSection } from "@/components/sections/certificates";
 
 export default function HomePage() {
@@ -27,7 +28,10 @@ export default function HomePage() {
       {/* 5. Section Organisasi */}
       <OrganizationsSection />
 
-      {/* 6. Section Sertifikat */}
+      {/* 6. Section Proyek */}
+      <ProjectsSection />
+
+      {/* 7. Section Sertifikat */}
       <CertificatesSection />
 
       <Footer />

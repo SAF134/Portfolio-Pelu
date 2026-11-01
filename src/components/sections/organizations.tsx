@@ -1,4 +1,7 @@
+"use client";
+
 import { Users, Award } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 import {
   ORGANIZATIONS_DATA,
   ORGANIZATIONS_SECTION,
@@ -7,6 +10,10 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { TimelineCard } from "@/components/ui/timeline-card";
 
 export function OrganizationsSection() {
+  const { language } = useLanguage();
+  const section = ORGANIZATIONS_SECTION[language];
+  const items = ORGANIZATIONS_DATA[language];
+
   return (
     <section
       id="organisasi"
@@ -14,13 +21,10 @@ export function OrganizationsSection() {
       className="scroll-mt-20 py-16 md:scroll-mt-24 md:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <SectionHeader
-          title={ORGANIZATIONS_SECTION.title}
-          subtitle={ORGANIZATIONS_SECTION.subtitle}
-        />
+        <SectionHeader title={section.title} subtitle={section.subtitle} />
 
         <div className="mx-auto flex max-w-4xl flex-col gap-6">
-          {ORGANIZATIONS_DATA.map((item) => (
+          {items.map((item) => (
             <TimelineCard
               key={item.id}
               icon={<Users className="size-6" aria-hidden="true" />}

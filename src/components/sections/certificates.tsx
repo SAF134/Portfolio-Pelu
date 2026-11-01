@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/context/language-context";
 import { CERTIFICATES_DATA, CERTIFICATES_SECTION } from "@/data/certificates";
 import { SectionHeader } from "@/components/ui/section-header";
 import { CertificateDialog } from "@/components/sections/certificate-dialog";
 
 export function CertificatesSection() {
+  const { language } = useLanguage();
+  const section = CERTIFICATES_SECTION[language];
+  const items = CERTIFICATES_DATA[language];
+
   return (
     <section
       id="sertifikat"
@@ -11,14 +18,11 @@ export function CertificatesSection() {
       className="scroll-mt-20 py-16 md:scroll-mt-24 md:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <SectionHeader
-          title={CERTIFICATES_SECTION.title}
-          subtitle={CERTIFICATES_SECTION.subtitle}
-        />
+        <SectionHeader title={section.title} subtitle={section.subtitle} />
 
         {/* Grid Sertifikat: 1 kolom (mobile), 2 kolom (tablet), 3 kolom (desktop) */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {CERTIFICATES_DATA.map((item) => (
+          {items.map((item) => (
             <article
               key={item.id}
               className="group border-border bg-card flex flex-col justify-between rounded-2xl border-2 p-4 shadow-[4px_4px_0_0_var(--border)] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0_0_var(--border)] md:p-5"

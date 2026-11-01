@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { CertificateItem } from "@/types";
+import { useLanguage } from "@/context/language-context";
 import { CERTIFICATES_SECTION } from "@/data/certificates";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,6 +21,8 @@ interface CertificateDialogProps {
 
 export function CertificateDialog({ certificate }: CertificateDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const section = CERTIFICATES_SECTION[language];
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -29,7 +32,7 @@ export function CertificateDialog({ certificate }: CertificateDialogProps) {
           <Button className="border-border bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-primary mt-auto w-full rounded-full border-2 text-sm font-semibold shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none" />
         }
       >
-        {CERTIFICATES_SECTION.viewDetailText}
+        {section.viewDetailText}
       </DialogTrigger>
 
       <DialogContent className="border-border bg-card max-h-[90vh] max-w-[95vw] overflow-y-auto rounded-2xl border-2 p-5 shadow-[6px_6px_0_0_var(--border)] md:max-w-3xl md:p-6">
@@ -50,7 +53,7 @@ export function CertificateDialog({ certificate }: CertificateDialogProps) {
             <DialogHeader className="gap-2 text-left">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-muted-foreground text-xs font-medium">
-                  {CERTIFICATES_SECTION.issuedByText}
+                  {section.issuedByText}
                 </span>
                 <span className="text-primary text-xs font-bold">
                   {certificate.issuer}

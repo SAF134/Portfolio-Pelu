@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Download, Mail } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 import { PROFILE_DATA } from "@/data/profile";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -41,6 +44,9 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export function ProfileSection() {
+  const { language } = useLanguage();
+  const data = PROFILE_DATA[language];
+
   return (
     <section
       id="profil"
@@ -54,7 +60,7 @@ export function ProfileSection() {
             {/* Teks Profil (Desktop/Tablet: kiri 3/5, Mobile: bawah) */}
             <div className="order-2 flex flex-col items-center gap-4 text-center md:order-1 md:col-span-3 md:items-start md:text-left">
               <span className="text-primary text-xs font-bold tracking-widest uppercase md:text-sm">
-                {PROFILE_DATA.greeting}
+                {data.greeting}
               </span>
 
               {/* Nama lengkap dan gelar dibuat sejajar tidak turun ke bawah dengan font proporsional */}
@@ -62,16 +68,16 @@ export function ProfileSection() {
                 id="profil-heading"
                 className="text-foreground text-lg font-bold tracking-tight min-[380px]:text-xl sm:text-2xl md:text-[22px] md:whitespace-nowrap lg:text-[28px] xl:text-3xl"
               >
-                {PROFILE_DATA.name}
+                {data.name}
               </h1>
 
               <p className="text-primary text-base font-semibold md:text-lg">
-                {PROFILE_DATA.role}
+                {data.role}
               </p>
 
               {/* Deskripsi Tentang Saya diformat rata kanan-kiri (justify) */}
               <p className="text-muted-foreground text-justify text-sm leading-relaxed md:text-base">
-                {PROFILE_DATA.description}
+                {data.description}
               </p>
 
               {/* Tombol Aksi & Media Sosial */}
@@ -79,41 +85,41 @@ export function ProfileSection() {
                 {/* Baris 1: Tombol Unduh CV dan Hubungi Saya */}
                 <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
                   <a
-                    href={PROFILE_DATA.cvUrl}
+                    href={data.cvUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border-border bg-primary text-primary-foreground focus-visible:ring-primary inline-flex h-11 items-center justify-center gap-2 rounded-full border-2 px-6 text-sm font-semibold shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                   >
                     <Download className="size-4 shrink-0" aria-hidden="true" />
-                    <span>{PROFILE_DATA.cvButtonText}</span>
+                    <span>{data.cvButtonText}</span>
                   </a>
 
                   <a
-                    href={PROFILE_DATA.email}
+                    href={data.email}
                     className="border-border bg-background text-foreground hover:bg-muted focus-visible:ring-primary inline-flex h-11 items-center justify-center gap-2 rounded-full border-2 px-6 text-sm font-semibold shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                   >
                     <Mail className="size-4 shrink-0" aria-hidden="true" />
-                    <span>{PROFILE_DATA.contactButtonText}</span>
+                    <span>{data.contactButtonText}</span>
                   </a>
                 </div>
 
                 {/* Baris 2: Tombol LinkedIn dan Instagram diposisikan tepat di bawahnya */}
                 <div className="flex items-center justify-center gap-3 pt-1 md:justify-start">
                   <a
-                    href={PROFILE_DATA.linkedinUrl}
+                    href={data.linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={PROFILE_DATA.linkedinAriaLabel}
+                    aria-label={data.linkedinAriaLabel}
                     className="border-border bg-background text-foreground hover:bg-muted focus-visible:ring-primary inline-flex size-11 items-center justify-center rounded-full border-2 shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                   >
                     <LinkedinIcon className="size-5 shrink-0" />
                   </a>
 
                   <a
-                    href={PROFILE_DATA.instagramUrl}
+                    href={data.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={PROFILE_DATA.instagramAriaLabel}
+                    aria-label={data.instagramAriaLabel}
                     className="border-border bg-background text-foreground hover:bg-muted focus-visible:ring-primary inline-flex size-11 items-center justify-center rounded-full border-2 shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                   >
                     <InstagramIcon className="size-5 shrink-0" />
@@ -126,8 +132,8 @@ export function ProfileSection() {
             <div className="order-1 flex justify-center md:order-2 md:col-span-2 md:justify-end">
               <div className="relative">
                 <Image
-                  src={PROFILE_DATA.avatarUrl}
-                  alt={PROFILE_DATA.avatarAlt}
+                  src={data.avatarUrl}
+                  alt={data.avatarAlt}
                   width={400}
                   height={500}
                   priority

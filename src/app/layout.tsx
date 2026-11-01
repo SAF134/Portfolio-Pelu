@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { LanguageProvider } from "@/context/language-context";
 import { Navbar } from "@/components/layout/navbar";
 import "./globals.css";
 
@@ -61,15 +62,17 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${inter.variable} antialiased`}>
       <body className="bg-background text-foreground selection:bg-primary/20 selection:text-primary min-h-screen font-sans">
-        {/* Skip Link untuk Aksesibilitas */}
-        <a
-          href="#konten-utama"
-          className="focus:border-border focus:bg-primary focus:text-primary-foreground sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:border-2 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:shadow-md focus:outline-none"
-        >
-          Lewati ke konten
-        </a>
-        <Navbar />
-        {children}
+        <LanguageProvider>
+          {/* Skip Link untuk Aksesibilitas */}
+          <a
+            href="#konten-utama"
+            className="focus:border-border focus:bg-primary focus:text-primary-foreground sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:border-2 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:shadow-md focus:outline-none"
+          >
+            Lewati ke konten
+          </a>
+          <Navbar />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

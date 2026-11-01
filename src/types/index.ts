@@ -1,13 +1,22 @@
+export type Language = "id" | "en";
+
 export type NavigationSectionId =
   | "profil"
   | "pendidikan"
   | "keahlian"
   | "pengalaman"
   | "organisasi"
+  | "proyek"
   | "sertifikat";
 
 export type NavIconName =
-  "User" | "GraduationCap" | "Wrench" | "Briefcase" | "Users" | "Award";
+  | "User"
+  | "GraduationCap"
+  | "Wrench"
+  | "Briefcase"
+  | "Users"
+  | "FolderKanban"
+  | "Award";
 
 export interface NavigationItem {
   id: NavigationSectionId;
@@ -75,4 +84,12 @@ export interface CertificateItem {
   thumbnailUrl: string;
   fullImageUrl: string;
   pdfUrl?: string;
+}
+
+export interface ProjectItem {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  projectUrl: string;
 }

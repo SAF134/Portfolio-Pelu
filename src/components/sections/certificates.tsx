@@ -1,15 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import { useLanguage } from "@/context/language-context";
 import { CERTIFICATES_DATA, CERTIFICATES_SECTION } from "@/data/certificates";
 import { SectionHeader } from "@/components/ui/section-header";
 import { CertificateDialog } from "@/components/sections/certificate-dialog";
 
 export function CertificatesSection() {
-  const { language } = useLanguage();
-  const section = CERTIFICATES_SECTION[language];
-  const items = CERTIFICATES_DATA[language];
+  const section = CERTIFICATES_SECTION;
+  const items = CERTIFICATES_DATA;
 
   return (
     <section

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { LanguageProvider } from "@/context/language-context";
 import { Navbar } from "@/components/layout/navbar";
 import "./globals.css";
 
@@ -12,12 +11,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-zahran.vercel.app"),
-  title: "Iftikar Muhamad Zahran | Portofolio Profesional",
-  description: "Portofolio profesional Iftikar Muhamad Zahran.",
-  authors: [{ name: "Iftikar Muhamad Zahran" }],
+  metadataBase: new URL("https://portfolio-adnan.vercel.app"),
+  title: "Adnan Hafidz Pelu, S.Par. | Portofolio Profesional",
+  description: "Portofolio profesional Adnan Hafidz Pelu.",
+  authors: [{ name: "Adnan Hafidz Pelu" }],
   keywords: [
-    "Iftikar Muhamad Zahran",
+    "Adnan Hafidz Pelu",
     "Portofolio",
     "Logistik",
     "Supply Chain",
@@ -28,25 +27,25 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Iftikar Muhamad Zahran | Portofolio Profesional",
-    description: "Portofolio profesional Iftikar Muhamad Zahran.",
+    title: "Adnan Hafidz Pelu, S.Par. | Portofolio Profesional",
+    description: "Portofolio profesional Adnan Hafidz Pelu.",
     type: "website",
     locale: "id_ID",
     url: "https://portfolio-zahran.vercel.app",
     images: [
       {
-        url: "/images/zahran.webp",
+        url: "/images/pelu.webp",
         width: 800,
         height: 1000,
-        alt: "Iftikar Muhamad Zahran",
+        alt: "Adnan Hafidz Pelu",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iftikar Muhamad Zahran | Portofolio Profesional",
-    description: "Portofolio profesional Iftikar Muhamad Zahran.",
-    images: ["/images/zahran.webp"],
+    title: "Adnan Hafidz Pelu, S.Par. | Portofolio Profesional",
+    description: "Portofolio profesional Adnan Hafidz Pelu.",
+    images: ["/images/pelu.webp"],
   },
   robots: {
     index: true,
@@ -62,17 +61,15 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${inter.variable} antialiased`}>
       <body className="bg-background text-foreground selection:bg-primary/20 selection:text-primary min-h-screen font-sans">
-        <LanguageProvider>
-          {/* Skip Link untuk Aksesibilitas */}
-          <a
-            href="#konten-utama"
-            className="focus:border-border focus:bg-primary focus:text-primary-foreground sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:border-2 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:shadow-md focus:outline-none"
-          >
-            Lewati ke konten
-          </a>
-          <Navbar />
-          {children}
-        </LanguageProvider>
+        {/* Skip Link untuk Aksesibilitas */}
+        <a
+          href="#konten-utama"
+          className="focus:border-border focus:bg-primary focus:text-primary-foreground sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:border-2 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:shadow-md focus:outline-none"
+        >
+          Lewati ke konten
+        </a>
+        <Navbar />
+        {children}
       </body>
     </html>
   );

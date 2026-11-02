@@ -1,13 +1,9 @@
-"use client";
-
-import { useLanguage } from "@/context/language-context";
 import { SKILLS_DATA, SKILLS_SECTION } from "@/data/skills";
 import { SectionHeader } from "@/components/ui/section-header";
 
 export function SkillsSection() {
-  const { language } = useLanguage();
-  const section = SKILLS_SECTION[language];
-  const items = SKILLS_DATA[language];
+  const section = SKILLS_SECTION;
+  const items = SKILLS_DATA;
 
   return (
     <section

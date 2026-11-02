@@ -8,7 +8,7 @@ export interface TimelineCardProps {
   role: string;
   roleIcon?: React.ReactNode;
   location?: string;
-  period: string;
+  period?: string;
   description?: string;
   points?: string[];
   tags?: string[];
@@ -42,14 +42,16 @@ export function TimelineCard({
             </h3>
 
             {/* Badge Periode (Mobile: langsung di bawah judul) */}
-            <div className="sm:hidden">
-              <Badge
-                variant="outline"
-                className="border-border bg-background text-foreground rounded-full border-2 px-3 py-0.5 text-xs font-bold shadow-[1px_1px_0_0_var(--border)]"
-              >
-                {period}
-              </Badge>
-            </div>
+            {period && (
+              <div className="sm:hidden">
+                <Badge
+                  variant="outline"
+                  className="border-border bg-background text-foreground rounded-full border-2 px-3 py-0.5 text-xs font-bold shadow-[1px_1px_0_0_var(--border)]"
+                >
+                  {period}
+                </Badge>
+              </div>
+            )}
 
             {/* Baris Program Studi / Posisi / Divisi */}
             <div className="text-primary flex items-center gap-1.5 text-sm font-semibold">
@@ -72,14 +74,16 @@ export function TimelineCard({
         </div>
 
         {/* Badge Periode (Tablet & Desktop: kanan atas) */}
-        <div className="hidden shrink-0 sm:block">
-          <Badge
-            variant="outline"
-            className="border-border bg-background text-foreground rounded-full border-2 px-3 py-1 text-xs font-bold shadow-[2px_2px_0_0_var(--border)]"
-          >
-            {period}
-          </Badge>
-        </div>
+        {period && (
+          <div className="hidden shrink-0 sm:block">
+            <Badge
+              variant="outline"
+              className="border-border bg-background text-foreground rounded-full border-2 px-3 py-1 text-xs font-bold shadow-[2px_2px_0_0_var(--border)]"
+            >
+              {period}
+            </Badge>
+          </div>
+        )}
       </div>
 
       {/* Deskripsi (Bila ada) */}

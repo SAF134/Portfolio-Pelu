@@ -1,7 +1,4 @@
-"use client";
-
-import { Users, Award } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
+import { Users, Shield } from "lucide-react";
 import {
   ORGANIZATIONS_DATA,
   ORGANIZATIONS_SECTION,
@@ -10,9 +7,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { TimelineCard } from "@/components/ui/timeline-card";
 
 export function OrganizationsSection() {
-  const { language } = useLanguage();
-  const section = ORGANIZATIONS_SECTION[language];
-  const items = ORGANIZATIONS_DATA[language];
+  const section = ORGANIZATIONS_SECTION;
+  const items = ORGANIZATIONS_DATA;
 
   return (
     <section
@@ -30,7 +26,7 @@ export function OrganizationsSection() {
               icon={<Users className="size-6" aria-hidden="true" />}
               title={item.organization}
               role={item.role}
-              roleIcon={<Award className="size-4" aria-hidden="true" />}
+              roleIcon={<Shield className="size-4" aria-hidden="true" />}
               period={item.period}
               points={item.points}
             />

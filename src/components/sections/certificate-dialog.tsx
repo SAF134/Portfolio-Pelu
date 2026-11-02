@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { CertificateItem } from "@/types";
-import { useLanguage } from "@/context/language-context";
 import { CERTIFICATES_SECTION } from "@/data/certificates";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,8 +20,7 @@ interface CertificateDialogProps {
 
 export function CertificateDialog({ certificate }: CertificateDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { language } = useLanguage();
-  const section = CERTIFICATES_SECTION[language];
+  const section = CERTIFICATES_SECTION;
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>

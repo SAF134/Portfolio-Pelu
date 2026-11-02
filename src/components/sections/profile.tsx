@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { Download, Mail } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
 import { PROFILE_DATA } from "@/data/profile";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -44,8 +41,7 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export function ProfileSection() {
-  const { language } = useLanguage();
-  const data = PROFILE_DATA[language];
+  const data = PROFILE_DATA;
 
   return (
     <section

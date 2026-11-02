@@ -1,5 +1,3 @@
-export type Language = "id" | "en";
-
 export type NavigationSectionId =
   | "profil"
   | "pendidikan"
@@ -89,7 +87,9 @@ export interface CertificateItem {
 export interface ProjectItem {
   id: string;
   title: string;
-  description: string;
-  imageUrl: string;
-  projectUrl: string;
+  role: string;
+  period?: string;
+  description?: string;
+  points?: string[];
+  technologies?: string[];
 }

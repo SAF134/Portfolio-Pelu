@@ -1,15 +1,11 @@
-"use client";
-
 import { GraduationCap, BookOpen } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
 import { EDUCATION_DATA, EDUCATION_SECTION } from "@/data/education";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TimelineCard } from "@/components/ui/timeline-card";
 
 export function EducationSection() {
-  const { language } = useLanguage();
-  const section = EDUCATION_SECTION[language];
-  const items = EDUCATION_DATA[language];
+  const section = EDUCATION_SECTION;
+  const items = EDUCATION_DATA;
 
   return (
     <section

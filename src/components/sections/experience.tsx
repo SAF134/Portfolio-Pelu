@@ -1,15 +1,11 @@
-"use client";
-
 import { Briefcase, Building2 } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
 import { EXPERIENCE_DATA, EXPERIENCE_SECTION } from "@/data/experience";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TimelineCard } from "@/components/ui/timeline-card";
 
 export function ExperienceSection() {
-  const { language } = useLanguage();
-  const section = EXPERIENCE_SECTION[language];
-  const items = EXPERIENCE_DATA[language];
+  const section = EXPERIENCE_SECTION;
+  const items = EXPERIENCE_DATA;
 
   return (
     <section

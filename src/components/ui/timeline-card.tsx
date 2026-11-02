@@ -12,6 +12,7 @@ export interface TimelineCardProps {
   description?: string;
   points?: string[];
   tags?: string[];
+  action?: React.ReactNode;
 }
 
 export function TimelineCard({
@@ -24,6 +25,7 @@ export function TimelineCard({
   description,
   points,
   tags,
+  action,
 }: TimelineCardProps) {
   return (
     <article className="group border-border bg-card rounded-2xl border-2 p-5 shadow-[4px_4px_0_0_var(--border)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_var(--border)] md:p-6">
@@ -125,6 +127,9 @@ export function TimelineCard({
           ))}
         </div>
       )}
+
+      {/* Tombol Aksi / Tautan Tambahan (Bila ada) */}
+      {action && <div className="mt-5 pt-1">{action}</div>}
     </article>
   );
 }

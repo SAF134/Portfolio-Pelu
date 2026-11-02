@@ -92,4 +92,5 @@ export interface ProjectItem {
   description?: string;
   points?: string[];
   technologies?: string[];
+  projectUrl?: string;
 }

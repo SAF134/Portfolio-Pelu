@@ -1,4 +1,4 @@
-import { FolderKanban, Briefcase } from "lucide-react";
+import { FolderKanban, Briefcase, ExternalLink } from "lucide-react";
 import { PROJECTS_DATA, PROJECTS_SECTION } from "@/data/projects";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TimelineCard } from "@/components/ui/timeline-card";
@@ -28,6 +28,22 @@ export function ProjectsSection() {
               description={item.description}
               points={item.points}
               tags={item.technologies}
+              action={
+                item.projectUrl ? (
+                  <a
+                    href={item.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-border bg-background text-foreground hover:bg-muted focus-visible:ring-primary inline-flex h-9 items-center justify-center gap-2 rounded-full border-2 px-4 text-xs font-semibold shadow-[2px_2px_0_0_var(--border)] transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_var(--border)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:text-sm"
+                  >
+                    <ExternalLink
+                      className="size-3.5 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{section.proofButtonText}</span>
+                  </a>
+                ) : undefined
+              }
             />
           ))}
         </div>

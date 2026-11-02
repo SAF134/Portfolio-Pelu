@@ -24,10 +24,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Melakukan pengolahan, uji validitas, reliabilitas, dan analisis regresi linier berganda menggunakan perangkat lunak SPSS.",
       "Menyusun laporan hasil evaluasi kepuasan jamaah serta rekomendasi strategis bagi penyelenggara perjalanan ibadah umrah.",
     ],
-    technologies: [
-      "Metodologi Penelitian",
-      "Data Analysis",
-    ],
+    technologies: ["Metodologi Penelitian", "Data Analysis"],
     // TODO: ganti link url bukti proyek bila diperlukan
     projectUrl:
       "https://drive.google.com/drive/folders/1paPneP8bmR7M7uPyKtq-hsZVovM9cL9O?usp=sharing",

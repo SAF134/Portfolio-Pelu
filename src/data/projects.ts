@@ -14,9 +14,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title:
       "Pengaruh Kualitas Pelayanan terhadap Kepuasan Jamaah Umrah di Bogor",
     // TODO: ganti peran / role proyek bila diperlukan
-    role: "Peneliti Utama / Analis Data",
+    role: "Peneliti Analis Data",
     // TODO: ganti periode pelaksanaan proyek bila diperlukan
-    period: "2025",
+    period: "2025 - 2026",
     // TODO: ganti poin jobdesk / rincian proyek bila diperlukan
     points: [
       "Melaksanakan penelitian mengenai pengaruh lima dimensi kualitas pelayanan (SERVQUAL), yaitu tangibles, reliability, responsiveness, assurance, dan empathy terhadap kepuasan jamaah Umrah di wilayah Bogor.",
@@ -25,13 +25,11 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Menyusun laporan hasil evaluasi kepuasan jamaah serta rekomendasi strategis bagi penyelenggara perjalanan ibadah umrah.",
     ],
     technologies: [
-      "SPSS",
-      "SERVQUAL",
       "Metodologi Penelitian",
       "Data Analysis",
     ],
     // TODO: ganti link url bukti proyek bila diperlukan
     projectUrl:
-      "https://drive.google.com/drive/folders/1lP328hg1_gTeybXMDExj1iycUpEBqm0x",
+      "https://drive.google.com/drive/folders/1paPneP8bmR7M7uPyKtq-hsZVovM9cL9O?usp=sharing",
   },
 ];
